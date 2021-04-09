@@ -35,7 +35,9 @@ repositories {
 }
 
 dependencies {
-    compile 'com.tom_roush:pdfbox-android:1.8.9.1'
-    compile 'com.facebook.react:react-native:+'
+    implementation('com.tom_roush:pdfbox-android:1.8.9.1'){
+        exclude group: 'com.madgag.spongycastle'
+    }
+    implementation 'com.facebook.react:react-native:+'
 }
   
